@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // image styling
 const StyledImg = styled.span`
+    /* mix-blend-mode: screen; */
     filter: drop-shadow(0 0 10px ${({ theme }) => theme.link.shadow});
 
     & img {
@@ -65,3 +66,7 @@ export const DarkHeartToggle = () => {
         </StyledToggle>
     );
 };
+
+export const ImgStyles = styled.span`
+    filter: drop-shadow(0 0 25px ${({ theme }) => theme.link.underline});
+`;

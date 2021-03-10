@@ -12,16 +12,21 @@ const StyledCredits = styled.div`
 
     border: 1px solid ${({ theme }) => theme.color};
     border-radius: 10px;
-    max-width: 150px;
+    max-width: 300px;
     word-break: break-word;
 
-    font-size: 0.35em;
+    transform: scale(0.75);
     text-align: center;
     padding: 1em;
 
     :hover,
+    :focus,
     :active {
         filter: drop-shadow(0 0 2.5px ${({ theme }) => theme.color});
+    }
+
+    @media (max-width: 768px) {
+        max-width: 150px;
     }
 `;
 

@@ -3,12 +3,13 @@ import styled from "styled-components";
 const StyledA = styled.a`
     text-shadow: 0 0 0 #0000;
     filter: drop-shadow(0 0 0 #0000);
-    transition: all 0.25s;
+    transition: all 0.25s linear;
 
     :hover {
         color: ${({ theme }) => theme.color};
-        text-shadow: 0 0 20px ${({ theme }) => theme.link.underline};
-        filter: drop-shadow(0 0 10px ${({ theme }) => theme.link.underline});
+        filter: drop-shadow(0 0 20px ${({ theme }) => theme.link.underline});
+        text-shadow: 0 0 10px ${({ theme }) => theme.link.underline},
+            0 0 20px ${({ theme }) => theme.link.underline};
     }
 `;
 

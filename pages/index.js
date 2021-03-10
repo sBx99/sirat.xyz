@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import { Meta } from "../components/Layout";
-import { NoiseBg } from "../components/index/Noise";
 import { WebGif } from "../components/index/Images";
 import Content from "../components/index/Content";
 import Credits from "../components/index/Credits";
@@ -28,7 +27,6 @@ const Home = () => {
     return (
         <Styles>
             <Meta title="home" desc="this is the home page" />
-            <NoiseBg />
             <WebGif />
             <Content />
             <Credits />

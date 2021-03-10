@@ -10,7 +10,7 @@ const Main = styled.main`
     padding: 5vh 20vw;
 
     @media (max-width: 768px) {
-        padding: 5vh 7.5vw;
+        padding: 7.5vh 7.5vw;
     }
 `;
 
