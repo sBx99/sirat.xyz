@@ -29,11 +29,47 @@ export const darkTheme = {
 const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: "Avara";
-    src: url("/fonts/avara.woff") format("woff"),
-        url("/fonts/avara.woff2") format("woff2");
+    src: url("/assets/fonts/Avara/avara.woff") format("woff"),
+        url("/assets/fonts/Avara/avara.woff2") format("woff2");
     font-style: normal;
     font-weight: normal;
     font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-60.woff") format("woff"),
+      url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-60.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-90.woff") format("woff"),
+      url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-90.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-130.woff") format("woff"),
+      url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-130.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AUTHENTIC Sans";
+  src: url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-150.woff") format("woff"),
+      url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-150.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
 
 :root {
@@ -80,7 +116,7 @@ body {
     height: 100%;
     width: 100%;
 
-    font-family: "Menlo", monospace, system-ui;
+    font-family: "AUTHENTIC Sans", Arial, Helvetica, sans-serif, system-ui;
 }
 
 body {
@@ -100,15 +136,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Avara", serif;
+    font-family: "Avara", serif, system-ui;
 }
 
 p {
     text-align: justify;
 }
 
+li {
+    list-style: none;
+}
+
 a, a:-webkit-any-link {
-    font-family: "Avara", serif;
+    font-family: "Avara", serif, system-ui;
     color: inherit;
     font-weight: bold;
     font-style: italic;
