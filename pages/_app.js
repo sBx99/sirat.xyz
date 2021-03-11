@@ -43,9 +43,9 @@ const FixNav = styled.div`
         transition: all 0.25s linear;
 
         :hover {
-            filter: drop-shadow(0 0 20px ${({ theme }) => theme.link.underline});
-            text-shadow: 0 0 10px ${({ theme }) => theme.link.underline},
-                0 0 20px ${({ theme }) => theme.link.underline};
+            filter: drop-shadow(0 0 20px ${({ theme }) => theme.link.background});
+            text-shadow: 0 0 10px ${({ theme }) => theme.link.background},
+                0 0 20px ${({ theme }) => theme.link.background};
         }
     }
 

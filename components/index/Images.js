@@ -68,5 +68,5 @@ export const DarkHeartToggle = () => {
 };
 
 export const ImgStyles = styled.span`
-    filter: drop-shadow(0 0 25px ${({ theme }) => theme.link.underline});
+    filter: drop-shadow(0 0 25px ${({ theme }) => theme.link.background});
 `;

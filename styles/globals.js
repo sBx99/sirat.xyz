@@ -6,9 +6,8 @@ export const lightTheme = {
     color: "var(--black)",
     selection: "var(--transparentPink)",
     link: {
-        color: "var(--purple)",
-        underline: "var(--pink)",
-        background: "var(--transparentPink)",
+        color: "var(--pink)",
+        background: "var(--purple)",
         shadow: "var(--purple)",
     },
 };
@@ -18,9 +17,8 @@ export const darkTheme = {
     color: "var(--white)",
     selection: "var(--transparentPurple)",
     link: {
-        color: "var(--pink)",
-        underline: "var(--purple)",
-        background: "var(--transparentPurple)",
+        color: "var(--purple)",
+        background: "var(--pink)",
         shadow: "var(--pink)",
     },
 };
@@ -74,13 +72,6 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
     /* colors */
-    --prim-txt: #000;
-    --prim-bg: #fafafa;
-    --sec-txt: #fff;
-    --sec-bg: #050505;
-    --cover: #00f;
-    --covered: #00f2;
-
     --black: #050505;
     --white: #FAFAFA;
     --pink: #E838FF;
@@ -92,7 +83,7 @@ const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
     box-sizing: border-box;
     scrollbar-width: thin;
-    scrollbar-color: var(--prim-txt) var(--prim-bg);
+    scrollbar-color: ${({ theme }) => theme.color} #0000;
 }
 
 *::-webkit-scrollbar {
@@ -100,13 +91,13 @@ const GlobalStyle = createGlobalStyle`
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--prim-bg);
+  background: #0000;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--prim-txt);
+  background-color: ${({ theme }) => theme.color};
   border-radius: 20px;
-  border: 3px solid var(--prim-bg);
+  border: 3px solid #0000;
 }
 
 html,
@@ -141,10 +132,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     text-align: justify;
-}
-
-li {
-    list-style: none;
 }
 
 a, a:-webkit-any-link {
