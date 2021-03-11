@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import GlobalStyle, { lightTheme, darkTheme } from "../styles/globals";
 import Layout from "../components/Layout";
+import Progress from "../components/ScrollProgress";
 
 import { LightHeartToggle, DarkHeartToggle } from "../components/index/Images";
 import { NoiseBg } from "../components/index/Noise";
@@ -43,9 +44,10 @@ const FixNav = styled.div`
         transition: all 0.25s linear;
 
         :hover {
-            filter: drop-shadow(0 0 20px ${({ theme }) => theme.link.background});
+            filter: drop-shadow(0 0 15px ${({ theme }) => theme.link.background});
             text-shadow: 0 0 10px ${({ theme }) => theme.link.background},
-                0 0 20px ${({ theme }) => theme.link.background};
+                0 0 11.5px ${({ theme }) => theme.link.background},
+                0 0 13px ${({ theme }) => theme.link.background};
         }
     }
 
@@ -77,6 +79,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
             <GlobalStyle />
+            <Progress />
             <NoiseBg />
             <FixToggle>
                 <Button onClick={toggleTheme}>

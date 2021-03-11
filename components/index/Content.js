@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
     letter-spacing: 0.05em;
     line-height: 1.25;
     max-width: 575px;
-    padding: 1em 1em 0 1em;
+    padding: 1em;
     overflow: hidden;
 `;
 

@@ -15,7 +15,7 @@ const sketch = _ => {
     //Basic example from canvas-sketch repo
     return ({ context, frame, width, height, playhead }) => {
         context.clearRect(0, 0, width, height);
-        context.fillStyle = "#ca7df9";
+        context.fillStyle = "#90f";
         context.fillRect(0, 0, width, height);
 
         const gridSize = 4;
@@ -59,7 +59,7 @@ const sketch = _ => {
 
     function draw(context, x, y, length, thickness, rotation) {
         context.save();
-        context.fillStyle = "#edf67d";
+        context.fillStyle = "#0f0f0f";
 
         // Rotate in place
         context.translate(x, y);

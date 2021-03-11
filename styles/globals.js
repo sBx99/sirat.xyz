@@ -134,16 +134,32 @@ p {
     text-align: justify;
 }
 
-a, a:-webkit-any-link {
+ul, ol {
+    border: 2px solid ${({ theme }) => theme.color};
+    padding: 1em 2em;
+    box-shadow: 0 0 20px ${({ theme }) => theme.link.background};
+}
+
+ul {
+    & li {
+        list-style: none;
+    }
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a, a:any-link {
     font-family: "Avara", serif, system-ui;
     color: inherit;
     font-weight: bold;
     font-style: italic;
     text-decoration: none;
-    cursor: pointer;
 }
 
 a:hover, a:focus {
+    text-decoration: none;
     transform: scale(0.9);
 }
 
