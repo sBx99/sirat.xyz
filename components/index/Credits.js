@@ -28,6 +28,10 @@ const StyledCredits = styled.div`
     @media (max-width: 768px) {
         max-width: 150px;
     }
+
+    @media (max-height: 320px) {
+        display: none;
+    }
 `;
 
 const Credits = () => {

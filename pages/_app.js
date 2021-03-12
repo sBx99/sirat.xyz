@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import GlobalStyle, { lightTheme, darkTheme } from "../styles/globals";
 import Layout from "../components/Layout";
-import Progress from "../components/ScrollProgress";
 
 import { LightHeartToggle, DarkHeartToggle } from "../components/index/Images";
 import { NoiseBg } from "../components/index/Noise";
@@ -31,7 +30,7 @@ const FixToggle = styled.div`
 
 // fixed navbar
 
-const FixNav = styled.div`
+const Nav = styled.div`
     position: fixed;
     top: 7.5vh;
     right: 1em;
@@ -53,7 +52,7 @@ const FixNav = styled.div`
 
     & .home,
     .blog {
-        padding-right: 2.5vw;
+        margin-right: 2.5vw;
     }
 
     & span {
@@ -63,10 +62,10 @@ const FixNav = styled.div`
     @media (max-width: 768px) {
         top: 5vh;
         right: 5vw;
+    }
 
-        & .home {
-            padding-right: 5vw;
-        }
+    @media (max-width: 320px) {
+        font-size: 0.25em;
     }
 `;
 
@@ -80,14 +79,13 @@ function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
             <GlobalStyle />
-            <Progress />
             <NoiseBg />
             <FixToggle>
                 <Button onClick={toggleTheme}>
                     {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
                 </Button>
             </FixToggle>
-            <FixNav>
+            <Nav>
                 <Link to="/" href="/">
                     <a className="home">
                         home <span>🏠</span>
@@ -103,7 +101,7 @@ function MyApp({ Component, pageProps }) {
                         art <span>🎨</span>
                     </a>
                 </Link>
-            </FixNav>
+            </Nav>
             <Layout>
                 <Component {...pageProps} />
             </Layout>

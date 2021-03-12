@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 import { Meta } from "../components/Layout";
 import { WebGif } from "../components/index/Images";
+
 import Content from "../components/index/Content";
 import Credits from "../components/index/Credits";
 
 const Styles = styled.div`
+    overflow: hidden;
     height: 90vh;
 
     display: flex;
@@ -16,6 +18,7 @@ const Styles = styled.div`
 
     @media (max-width: 768px) {
         font-size: 0.75em;
+        height: 85vh;
     }
 
     @media (max-width: 500px) {
