@@ -17,7 +17,13 @@ const StyledWrapper = styled.div`
 `;
 
 const WrapName = styled.span`
-    text-decoration: underline wavy ${({ theme }) => theme.link.background};
+    display: inline-block;
+    background-clip: text;
+    color: ${({ theme }) => theme.link.background};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px transparent;
+    background-image: url(${({ theme }) => theme.glitter});
 `;
 
 const Content = () => {

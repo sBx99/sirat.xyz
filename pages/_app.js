@@ -51,11 +51,12 @@ const FixNav = styled.div`
         }
     }
 
-    & .home {
+    & .home,
+    .blog {
         padding-right: 2.5vw;
     }
 
-    & .line {
+    & span {
         font-style: normal;
     }
 
@@ -89,12 +90,17 @@ function MyApp({ Component, pageProps }) {
             <FixNav>
                 <Link to="/" href="/">
                     <a className="home">
-                        home <span className="line">🏠</span>
+                        home <span>🏠</span>
                     </a>
                 </Link>
                 <Link to="/blog" href="/blog">
                     <a className="blog">
-                        blog <span className="line">📓</span>
+                        blog <span>📓</span>
+                    </a>
+                </Link>
+                <Link to="/art" href="/art">
+                    <a className="art">
+                        art <span>🎨</span>
                     </a>
                 </Link>
             </FixNav>

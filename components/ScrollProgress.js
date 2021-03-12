@@ -13,7 +13,7 @@ const StyledProgress = styled.progress`
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 1vh;
+    height: 2vh;
     border: none;
     background: transparent;
     color: transparent;
@@ -39,8 +39,8 @@ const Progress = () => {
     useEffect(() => {
         gsap.to(".progress", {
             value: 100,
-            ease: "none",
-            scrollTrigger: { scrub: 2 },
+            ease: "power0.out",
+            scrollTrigger: { scrub: 1.5 },
         });
     });
 

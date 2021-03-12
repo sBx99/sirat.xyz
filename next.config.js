@@ -5,6 +5,6 @@ const withMdx = require("@next/mdx")();
 module.exports = withPlugins([[withTM], [withMdx]], {
     pageExtensions: ["js", "jsx", "mdx"],
     images: {
-        domains: ["i.imgur.com", "media.giphy.com"],
+        domains: ["i.imgur.com", "media.giphy.com", "cdn.glitch.com"],
     },
 });

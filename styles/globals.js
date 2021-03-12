@@ -4,7 +4,8 @@ import { createGlobalStyle } from "styled-components";
 export const lightTheme = {
     background: "var(--white)",
     color: "var(--black)",
-    selection: "var(--transparentPink)",
+    selection: "var(--transparentPurple)",
+    glitter: "/assets/glitter/purple.gif",
     link: {
         color: "var(--pink)",
         background: "var(--purple)",
@@ -15,7 +16,8 @@ export const lightTheme = {
 export const darkTheme = {
     background: "var(--black)",
     color: "var(--white)",
-    selection: "var(--transparentPurple)",
+    selection: "var(--transparentPink)",
+    glitter: "/assets/glitter/pink.gif",
     link: {
         color: "var(--purple)",
         background: "var(--pink)",
