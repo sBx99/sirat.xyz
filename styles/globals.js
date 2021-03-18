@@ -138,7 +138,7 @@ p {
 
 ul, ol {
     border: 2px solid ${({ theme }) => theme.color};
-    padding: 1em 2em;
+    padding: 0.5em 2em;
     box-shadow: 0 0 20px ${({ theme }) => theme.link.background};
 }
 
@@ -146,6 +146,10 @@ ul {
     & li {
         list-style: none;
     }
+}
+
+li {
+    margin: 0.5em 0;
 }
 
 a, button {

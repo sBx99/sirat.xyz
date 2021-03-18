@@ -25,6 +25,10 @@ const WrapName = styled.span`
     -webkit-text-stroke: 1px transparent;
     background-image: url(${({ theme }) => theme.glitter});
     filter: drop-shadow(0 0 10px ${({ theme }) => theme.selection});
+    /*
+    text-emphasis: "•";
+    -webkit-text-emphasis: "•";
+    */
 `;
 
 const Content = () => {

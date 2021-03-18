@@ -29,7 +29,7 @@ const Styles = styled.div`
 const Home = () => {
     return (
         <Styles>
-            <Meta title="home" desc="this is the home page" />
+            <Meta title="Sirat Baweja" desc="this is the home page" />
             <WebGif />
             <Content />
             <Credits />

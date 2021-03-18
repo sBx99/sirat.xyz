@@ -16,10 +16,15 @@ const Card = styled.div`
     padding: 0.25em 1em;
     background: ${({ theme }) => theme.background};
     border: 2px solid ${({ theme }) => theme.color};
-    filter: drop-shadow(0 0 10px ${({ theme }) => theme.link.background});
+    transition: all 0.25s linear;
 
     & p {
         text-align: left;
+    }
+
+    :hover {
+        transform: scale(0.95);
+        filter: drop-shadow(0 0 10px ${({ theme }) => theme.link.background});
     }
 `;
 

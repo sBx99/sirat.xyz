@@ -23,6 +23,15 @@ export const Meta = ({ title, desc }) => {
     );
 };
 
+export const Favicon = ({ fav }) => {
+    const favicon = `/icons/${fav}`;
+    return (
+        <Head>
+            <link rel="icon" href={favicon} />
+        </Head>
+    );
+};
+
 const Layout = ({ children }) => {
     return (
         <>
