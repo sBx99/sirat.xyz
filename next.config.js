@@ -7,6 +7,17 @@ module.exports = withPlugins([[withTM], [withMdx]], {
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
     },
+    webpack: (config, { dev, isServer }) => {
+        // react -> preact
+        if (!dev && !isServer) {
+            Object.assign(config.resolve.alias, {
+                react: "preact/compat",
+                "react-dom/test-utils": "preact/test-utils",
+                "react-dom": "preact/compat",
+            });
+        }
+        return config;
+    },
     async headers() {
         return [
             {
