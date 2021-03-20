@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Link from "next/link";
 
-import GlobalStyle, { lightTheme, darkTheme } from "../styles/globals";
+import GlobalStyle, { lightTheme, darkTheme } from "@/styles/globals";
 import Layout from "../components/Layout";
 
 import { LightHeartToggle, DarkHeartToggle } from "../components/index/Images";
