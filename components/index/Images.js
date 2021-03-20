@@ -1,8 +1,5 @@
-import Image from "next/image";
 import styled from "styled-components";
-import { useAmp } from "next/amp";
-
-export const config = { amp: "hybrid" };
+import CustomImage from "@/components/Image";
 
 // image styling
 const StyledImg = styled.span`
@@ -16,27 +13,15 @@ const StyledImg = styled.span`
     }
 `;
 
-export const WebGif = ({ ...props }) => {
-    const isAmp = useAmp();
-
+export const WebGif = () => {
     return (
         <StyledImg>
-            {isAmp ? (
-                <amp-img
-                    src="/assets/index/who-dis.gif"
-                    alt="new website who dis"
-                    width="500"
-                    height="200"
-                    layout="responsive"
-                />
-            ) : (
-                <Image
-                    src="/assets/index/who-dis.gif"
-                    alt="new website who dis"
-                    width={500}
-                    height={200}
-                />
-            )}
+            <CustomImage
+                src="/assets/index/who-dis.gif"
+                alt="new website who dis"
+                width="500"
+                height="200"
+            />
         </StyledImg>
     );
 };
@@ -56,52 +41,28 @@ const StyledToggle = styled.span`
     }
 `;
 
-export const LightHeartToggle = ({ ...props }) => {
-    const isAmp = useAmp();
-
+export const LightHeartToggle = () => {
     return (
         <StyledToggle>
-            {isAmp ? (
-                <amp-img
-                    src="/assets/theme-switcher/light-theme-heart.gif"
-                    alt="a gif of a white rotating heart"
-                    width="100"
-                    height="100"
-                    layout="responsive"
-                />
-            ) : (
-                <Image
-                    src="/assets/theme-switcher/light-theme-heart.gif"
-                    alt="a gif of a white rotating heart"
-                    width={100}
-                    height={100}
-                />
-            )}
+            <CustomImage
+                src="/assets/theme-switcher/light-theme-heart.gif"
+                alt="a gif of a white rotating heart"
+                width="100"
+                height="100"
+            />
         </StyledToggle>
     );
 };
 
-export const DarkHeartToggle = ({ ...props }) => {
-    const isAmp = useAmp();
-
+export const DarkHeartToggle = () => {
     return (
         <StyledToggle>
-            {isAmp ? (
-                <amp-img
-                    src="/assets/theme-switcher/dark-theme-heart.gif"
-                    alt="a gif of a dark rotating heart"
-                    width="100"
-                    height="100"
-                    layout="responsive"
-                />
-            ) : (
-                <Image
-                    src="/assets/theme-switcher/dark-theme-heart.gif"
-                    alt="a gif of a dark rotating heart"
-                    width={100}
-                    height={100}
-                />
-            )}
+            <CustomImage
+                src="/assets/theme-switcher/dark-theme-heart.gif"
+                alt="a gif of a dark rotating heart"
+                width="100"
+                height="100"
+            />
         </StyledToggle>
     );
 };

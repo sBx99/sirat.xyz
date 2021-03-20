@@ -6,7 +6,7 @@ module.exports = withPlugins([[withTM], [withMdx]], {
     pageExtensions: ["js", "jsx", "mdx"],
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
-    },
+    } /*
     webpack: (config, { dev, isServer }) => {
         // react -> preact
         if (!dev && !isServer) {
@@ -17,7 +17,7 @@ module.exports = withPlugins([[withTM], [withMdx]], {
             });
         }
         return config;
-    },
+    }, */,
     async headers() {
         return [
             {

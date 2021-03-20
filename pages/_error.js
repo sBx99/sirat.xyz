@@ -1,5 +1,5 @@
-import { Meta } from "../components/Layout";
-import CenterDiv from "../styles/center";
+import { Meta } from "@/components/Layout";
+import CenterDiv from "@/styles/center";
 
 const Error = ({ statusCode }) => {
     return (

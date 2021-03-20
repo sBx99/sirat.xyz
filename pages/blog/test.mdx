@@ -1,13 +1,12 @@
-import Image from "next/image";
+import { Meta } from "@/components/Layout";
+import Progress from "@/components/ScrollProgress";
 
-import Progress from "../../components/ScrollProgress";
-import { ImgStyles } from "../../components/index/Images";
-import { Meta } from "../../components/Layout";
-import { JavascriptCode, PythonCode } from "../../components/Code";
+import CustomImage from "@/components/Image";
+import { ImgStyles } from "@/components/index/Images";
 
-import { CanvasWrap, CanvasWrap3D } from "../../components/blog/CanvasUtils";
-import RotatingLines from "../../sketches/RotatingLines";
-import Simple3D from "../../sketches/Simple3D";
+import { CanvasWrap, CanvasWrap3D } from "@/components/blog/CanvasUtils";
+import RotatingLines from "@/sketches/RotatingLines";
+import Simple3D from "@/sketches/Simple3D";
 
 <Meta title="hello world" desc="welcome to my first blog!" />
 
@@ -18,11 +17,11 @@ import Simple3D from "../../sketches/Simple3D";
 Welcome to my first blog. How's it going? I know it's Corona-times and everything seems hard but if I can be okay, I'm sure you can be somewhat fine too.
 
 <ImgStyles>
-    <Image
+    <CustomImage
         src="https://media.giphy.com/media/LPkczVwUYcMbXsRCdP/giphy.gif"
         alt="mask on, glasses on, lfg"
-        width={250}
-        height={250}
+        width="250"
+        height="250"
     />
 </ImgStyles>
 
@@ -87,11 +86,11 @@ dragée pudding bear claw. Muffin cake cupcake candy canes. Soufflé candy
 canes biscuit. Macaroon gummies danish.
 
 <ImgStyles>
-    <Image
+    <CustomImage
         src="https://media.giphy.com/media/TjdjGJc9ti9RIFk0IJ/giphy.gif"
         alt="a shiny rotating diamond"
-        width={250}
-        height={250}
+        width="250"
+        height="250"
     />
 </ImgStyles>
 

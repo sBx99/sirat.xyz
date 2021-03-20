@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Meta } from "../components/Layout";
-import CenterDiv from "../styles/center";
-import CustomImage from "../components/Image";
 
-export const config = { amp: "hybrid" };
+import { Meta } from "@/components/Layout";
+import CenterDiv from "@/styles/center";
+import CustomImage from "@/components/Image";
 
 const FlexRow = styled.div`
     display: flex;

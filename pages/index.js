@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import { Meta } from "../components/Layout";
-import { WebGif } from "../components/index/Images";
+import { Meta } from "@/components/Layout";
+import { WebGif } from "@/components/index/Images";
 
-import Content from "../components/index/Content";
-import Credits from "../components/index/Credits";
+import Content from "@/components/index/Content";
+import Credits from "@/components/index/Credits";
 
 const Styles = styled.div`
     overflow: hidden;
