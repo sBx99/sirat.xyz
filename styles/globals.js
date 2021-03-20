@@ -85,21 +85,21 @@ const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
     box-sizing: border-box;
     scrollbar-width: auto;
-    scrollbar-color: ${({ theme }) => theme.color} ${({ theme }) => theme.selection};
+    scrollbar-color: ${({ theme }) => theme.color} #0000;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: ${({ theme }) => theme.selection};
+  background: #0000;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: ${({ theme }) => theme.color};
-  border-radius: 20px;
-  border: 4px solid ${({ theme }) => theme.selection};
+  border-radius: 10px;
+  border: 5px solid #0000;
 }
 
 html,
@@ -185,12 +185,10 @@ button:active {
 
 ::selection {
     background-color: ${({ theme }) => theme.selection};
-    color: ${({ theme }) => theme.color};
 }
 
 ::-moz-selection {
     background-color: ${({ theme }) => theme.selection};
-    color: ${({ theme }) => theme.color};
 }
 `;
 
