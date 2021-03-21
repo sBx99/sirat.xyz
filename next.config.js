@@ -7,34 +7,6 @@ module.exports = withPlugins([[withTM], [withMdx]], {
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
     },
-    async rewrites() {
-        return [
-            {
-                source: "/github",
-                destination: "https://github.com/sBx99",
-            },
-            {
-                source: "/linkedin",
-                destination: "https://linkedin.com/in/siratbaweja",
-            },
-            {
-                source: "/glitch",
-                destination: "https://glitch.com/@sirat",
-            },
-            {
-                source: "/codepen",
-                destination: "https://codepen.io/sbx99",
-            },
-            {
-                source: "/p5-editor",
-                destination: "https://editor.p5.js/sBx99/sketches",
-            },
-            {
-                source: "/processing",
-                destination: "https://openprocessing.org/user/222026?view=sketches",
-            },
-        ];
-    },
     async headers() {
         return [
             {
