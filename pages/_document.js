@@ -16,61 +16,71 @@ class MyDocument extends Document {
                         rel="preload"
                         href="/assets/fonts/Avara/avara.woff"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/Avara/avara.woff2"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff2"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-60.woff"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-60.woff2"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff2"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-90.woff"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-90.woff2"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff2"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-130.woff"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-130.woff2"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff2"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-150.woff"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff"
+                        crossOrigin="anonymous"
                     />
                     <link
                         rel="preload"
                         href="/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-150.woff2"
                         as="font"
-                        crossOrigin=""
+                        type="font/woff2"
+                        crossOrigin="anonymous"
                     />
                 </Head>
                 <body>

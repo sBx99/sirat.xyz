@@ -33,7 +33,10 @@ const GlobalStyle = createGlobalStyle`
         url("/assets/fonts/Avara/avara.woff2") format("woff2");
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
+    font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -42,7 +45,10 @@ const GlobalStyle = createGlobalStyle`
       url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-60.woff2") format("woff2");
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
+  font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -51,7 +57,10 @@ const GlobalStyle = createGlobalStyle`
       url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-90.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
+  font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -60,7 +69,10 @@ const GlobalStyle = createGlobalStyle`
       url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-130.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -69,7 +81,10 @@ const GlobalStyle = createGlobalStyle`
       url("/assets/fonts/AUTHENTIC-Sans/AUTHENTICSans-150.woff2") format("woff2");
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
+  font-display: optional;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 :root {
@@ -137,14 +152,13 @@ p {
 }
 
 ul, ol {
-    border: 2px solid ${({ theme }) => theme.color};
-    padding: 0.5em 2em;
-    box-shadow: 0 0 20px ${({ theme }) => theme.link.background};
+    text-align: left;
+    font-family: "AUTHENTIC Sans", sans-serif;
 }
 
 ul {
     & li {
-        list-style: none;
+        list-style: dashed;
     }
 }
 

@@ -6,18 +6,35 @@ module.exports = withPlugins([[withTM], [withMdx]], {
     pageExtensions: ["js", "jsx", "mdx"],
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
-    } /*
-    webpack: (config, { dev, isServer }) => {
-        // react -> preact
-        if (!dev && !isServer) {
-            Object.assign(config.resolve.alias, {
-                react: "preact/compat",
-                "react-dom/test-utils": "preact/test-utils",
-                "react-dom": "preact/compat",
-            });
-        }
-        return config;
-    }, */,
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/github",
+                destination: "https://github.com/sBx99",
+            },
+            {
+                source: "/linkedin",
+                destination: "https://linkedin.com/in/siratbaweja",
+            },
+            {
+                source: "/glitch",
+                destination: "https://glitch.com/@sirat",
+            },
+            {
+                source: "/codepen",
+                destination: "https://codepen.io/sbx99",
+            },
+            {
+                source: "/p5-editor",
+                destination: "https://editor.p5.js/sBx99/sketches",
+            },
+            {
+                source: "/processing",
+                destination: "https://openprocessing.org/user/222026?view=sketches",
+            },
+        ];
+    },
     async headers() {
         return [
             {
