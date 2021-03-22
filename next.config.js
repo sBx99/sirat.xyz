@@ -7,6 +7,18 @@ module.exports = withPlugins([[withTM], [withMdx]], {
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
     },
+    async rewrites() {
+        return [
+            {
+                source: "/bee.js",
+                destination: "https://cdn.splitbee.io/sb.js",
+            },
+            {
+                source: "/_hive/:slug",
+                destination: "https://hive.splitbee.io/:slug",
+            },
+        ];
+    },
     async headers() {
         return [
             {
