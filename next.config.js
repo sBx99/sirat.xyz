@@ -1,11 +1,15 @@
 const withPlugins = require("next-compose-plugins");
 const withTM = require("next-transpile-modules")(["gsap", "react-syntax-highlighter"]);
 const withMdx = require("@next/mdx")();
+const withPreact = require("next-plugin-preact");
 
-module.exports = withPlugins([[withTM], [withMdx]], {
+module.exports = withPlugins([[withTM], [withMdx], [withPreact]], {
     pageExtensions: ["js", "jsx", "mdx"],
     images: {
         domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
+    },
+    experimental: {
+        modern: true,
     },
     async rewrites() {
         return [
