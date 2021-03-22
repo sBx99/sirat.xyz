@@ -2,27 +2,27 @@ import { createGlobalStyle } from "styled-components";
 
 /* themes */
 export const lightTheme = {
-    background: "var(--white)",
-    color: "var(--black)",
-    selection: "var(--transparentPurple)",
-    glitter: "/assets/glitter/purple.gif",
-    link: {
-        color: "var(--pink)",
-        background: "var(--purple)",
-        shadow: "var(--purple)",
-    },
+   background: "var(--white)",
+   color: "var(--black)",
+   selection: "var(--transparentPurple)",
+   glitter: "/assets/glitter/purple.gif",
+   link: {
+      color: "var(--pink)",
+      background: "var(--purple)",
+      shadow: "var(--purple)",
+   },
 };
 
 export const darkTheme = {
-    background: "var(--black)",
-    color: "var(--white)",
-    selection: "var(--transparentPink)",
-    glitter: "/assets/glitter/pink.gif",
-    link: {
-        color: "var(--purple)",
-        background: "var(--pink)",
-        shadow: "var(--pink)",
-    },
+   background: "var(--black)",
+   color: "var(--white)",
+   selection: "var(--transparentPink)",
+   glitter: "/assets/glitter/pink.gif",
+   link: {
+      color: "var(--purple)",
+      background: "var(--pink)",
+      shadow: "var(--pink)",
+   },
 };
 
 /* global styles */
@@ -143,38 +143,13 @@ body {
     line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Avara", serif, system-ui;
-}
-
-p {
-    text-align: justify;
-}
-
-ul, ol {
-    text-align: left;
-    font-family: "AUTHENTIC Sans", sans-serif;
-}
-
-ul {
-    & li {
-        list-style: dashed;
-    }
-}
-
-li {
-    margin: 0.5em 0;
-}
-
 a, button {
     cursor: pointer;
 }
 
 a, a:any-link {
-    font-family: "Avara", serif, system-ui;
+    font-family: inherit;
     color: inherit;
-    font-weight: bold;
-    font-style: italic;
     text-decoration: none;
 }
 
@@ -189,7 +164,7 @@ button:focus {
 }
 
 button:focus {
-    outline: 1px solid #00000001;
+    outline: 1px solid #0000;
     outline-offset: -4px;
 }
 

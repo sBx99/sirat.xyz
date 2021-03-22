@@ -14,6 +14,15 @@ const StyledWrapper = styled.div`
    max-width: 575px;
    padding: 1em;
    overflow: hidden;
+
+   & a,
+   a:any-link {
+      font-family: inherit;
+      font-weight: bold;
+      font-style: italic;
+      color: inherit;
+      text-decoration: none;
+   }
 `;
 
 const WrapName = styled.span`

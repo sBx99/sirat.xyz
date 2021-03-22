@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Link from "next/link";
 
+import splitbee from "@splitbee/web";
+import useSound from "use-sound";
+
 import GlobalStyle, { lightTheme, darkTheme } from "@styles/globals";
 import Layout from "@components/Layout";
 
 import { LightHeartToggle, DarkHeartToggle } from "@components/index/Images";
+
+splitbee.init({
+   disableCookie: true,
+});
 
 // Button
 const Button = styled.button`
@@ -40,6 +47,9 @@ const Nav = styled.div`
    & a {
       filter: drop-shadow(0 0 1px ${({ theme }) => theme.color});
       transition: all 0.25s linear;
+      font-family: "Avara", serif !important;
+      font-weight: bold;
+      font-style: italic;
 
       :hover {
          filter: drop-shadow(0 0 15px ${({ theme }) => theme.link.background});
@@ -70,32 +80,38 @@ const Nav = styled.div`
 
 function MyApp({ Component, pageProps }) {
    const [theme, setTheme] = useState("dark");
+   const [pop] = useSound("/assets/sounds/pop.mp3");
+   const [bite] = useSound("/assets/sounds/bite.mp3");
 
-   const toggleTheme = () => {
+   function toggleTheme() {
       theme === "dark" ? setTheme("light") : setTheme("dark");
-   };
+   }
 
    return (
       <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
          <GlobalStyle />
          <FixToggle>
-            <Button onClick={toggleTheme}>
+            <Button
+               onClick={() => {
+                  toggleTheme();
+                  pop();
+               }}>
                {theme === "dark" ? <LightHeartToggle /> : <DarkHeartToggle />}
             </Button>
          </FixToggle>
          <Nav>
             <Link to="/" href="/">
-               <a className="home">
+               <a className="home" onClick={bite}>
                   home <span>🏠</span>
                </a>
             </Link>
             <Link to="/blog" href="/blog">
-               <a className="blog">
+               <a className="blog" onClick={bite}>
                   blog <span>📓</span>
                </a>
             </Link>
             <Link to="/art" href="/art">
-               <a className="art">
+               <a className="art" onClick={bite}>
                   art <span>🎨</span>
                </a>
             </Link>
