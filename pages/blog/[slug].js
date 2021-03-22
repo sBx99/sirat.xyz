@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { BlogLayout, BlogCard } from "@/components/blog/BlogLayout";
+import { BlogLayout, BlogCard } from "@components/blog/BlogLayout";
 
 export default function Post() {
     const router = useRouter();
