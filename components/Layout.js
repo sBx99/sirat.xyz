@@ -8,6 +8,8 @@ const Main = styled.main`
    width: 100%;
    padding: 5vh 20vw;
 
+   font-family: "AUTHENTIC Sans", Arial, Helvetica, sans-serif, system-ui;
+
    h1,
    h2,
    h3,
@@ -15,7 +17,7 @@ const Main = styled.main`
    h5,
    h6 {
       text-align: center;
-      font-family: "Avara", serif, system-ui;
+      font-family: "Avara", monospace, system-ui;
    }
 
    p {

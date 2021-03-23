@@ -15,7 +15,7 @@ const Styles = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   font-family: "Avara", serif !important;
+   font-family: "Avara", monospace;
 
    @media (max-width: 768px) {
       font-size: 0.75em;

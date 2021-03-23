@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
    & a,
    a:any-link {
       font-family: inherit;
-      font-weight: bold;
+      font-weight: 400;
       font-style: italic;
       color: inherit;
       text-decoration: none;
@@ -28,13 +28,13 @@ const StyledWrapper = styled.div`
 const WrapName = styled.span`
    display: inline-block;
    background-clip: text;
-   color: ${({ theme }) => theme.link.background};
+   color: ${({ theme }) => theme.link.color};
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: 1px transparent;
    background-image: url(${({ theme }) => theme.glitter});
    filter: drop-shadow(0 0 10px ${({ theme }) => theme.selection});
-   /*
+   /*,
     text-emphasis: "•";
     -webkit-text-emphasis: "•";
     */

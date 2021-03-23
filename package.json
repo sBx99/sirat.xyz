@@ -1,7 +1,19 @@
 {
-   "name": "next-mdx-blog",
+   "name": "sirat-dot-xyz",
    "version": "0.1.0",
    "private": true,
+   "author": "sBx99 sirat.b99@gmail.com",
+   "keywords": [
+      "next-js",
+      "next",
+      "create-next-app",
+      "react",
+      "react-js",
+      "styled-components",
+      "preact",
+      "mdx",
+      "blog"
+   ],
    "scripts": {
       "dev": "next dev",
       "build:ssg": "cross-env NODE_ENV=production next build && next export -o build",
@@ -12,7 +24,6 @@
       "@mdx-js/loader": "^1.6.22",
       "@mdx-js/react": "^1.6.22",
       "@next/mdx": "^10.0.8",
-      "@splitbee/web": "^0.2.4",
       "canvas-sketch": "^0.7.4",
       "canvas-sketch-util": "^1.10.0",
       "gsap": "^3.6.0",

@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Link from "next/link";
-
-import splitbee from "@splitbee/web";
 import useSound from "use-sound";
 
 import GlobalStyle, { lightTheme, darkTheme } from "@styles/globals";
 import Layout from "@components/Layout";
 
 import { LightHeartToggle, DarkHeartToggle } from "@components/index/Images";
-
-splitbee.init({
-   disableCookie: true,
-});
 
 // Button
 const Button = styled.button`
