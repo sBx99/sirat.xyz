@@ -4,6 +4,7 @@ import useSound from "use-sound";
 
 import GlobalStyle, { lightTheme, darkTheme } from "@styles/globals";
 import Layout from "@components/Layout";
+import Progress from "@components/ScrollProgress";
 import Nav from "@components/Nav";
 
 import { LightHeartToggle, DarkHeartToggle } from "@components/index/Images";
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
    return (
       <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
          <GlobalStyle />
+         <Progress />
          <Toggler>
             <ToggleButton
                onClick={() => {

@@ -14,7 +14,8 @@ export const BlogLayout = ({ children }) => {
 const Card = styled.div`
    font-style: normal !important;
    padding: 0.25em 1em;
-   background: ${({ theme }) => theme.background};
+   color: inherit;
+   background: inherit;
    border: 2px solid ${({ theme }) => theme.color};
    transition: all 0.25s linear;
 

@@ -1,30 +1,33 @@
 import fs from "fs";
+import path from "path";
+
 import matter from "gray-matter";
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
+
 import dynamic from "next/dynamic";
-import Head from "next/head";
-import Link from "next/link";
-import path from "path";
+import BlogLink from "@components/blog/BlogLink";
+import { Meta } from "@components/Layout";
 import { blogFilePaths, BLOGS_PATH } from "@lib/mdx";
 
+import { CanvasWrap, CanvasWrap3D } from "@components/blog/CanvasUtils";
+
 const components = {
+   a: BlogLink,
    TestComponent: dynamic(() => import("@components/blog/TestComponent")),
-   Head,
+   RotatingLines: dynamic(() => import("@sketches/RotatingLines")),
+   Simple3D: dynamic(() => import("@sketches/Simple3D")),
+   CanvasWrap,
+   CanvasWrap3D,
+   Meta,
 };
 
 export default function BlogPage({ source, frontMatter }) {
    const content = hydrate(source, { components });
    return (
       <>
-         <header>
-            <nav>
-               <Link href="/">
-                  <a>👈 Go back home</a>
-               </Link>
-            </nav>
-         </header>
-         <div className="blog-header">
+         <Meta title={frontMatter.title} desc={frontMatter.description} />
+         <div>
             <h1>{frontMatter.title}</h1>
             {frontMatter.description && <p className="description">{frontMatter.description}</p>}
          </div>

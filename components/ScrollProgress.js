@@ -13,7 +13,7 @@ const StyledProgress = styled.progress`
    -webkit-appearance: none;
    appearance: none;
    width: 100%;
-   height: 2vh;
+   height: 1vh;
    border: none;
    background: transparent;
    color: transparent;
@@ -40,7 +40,7 @@ const Progress = () => {
       gsap.to(".progress", {
          value: 100,
          ease: "power0.out",
-         scrollTrigger: { scrub: 1.5 },
+         scrollTrigger: { scrub: 1.2 },
       });
    });
 

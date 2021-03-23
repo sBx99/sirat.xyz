@@ -6,6 +6,7 @@ export const lightTheme = {
    color: "var(--black)",
    selection: "var(--transparentPurple)",
    glitter: "/assets/glitter/purple.gif",
+   secondary: "var(--secondary-white)",
    link: {
       color: "var(--pink)",
       background: "var(--purple)",
@@ -18,6 +19,7 @@ export const darkTheme = {
    color: "var(--white)",
    selection: "var(--transparentPink)",
    glitter: "/assets/glitter/pink.gif",
+   secondary: "var(--secondary-black)",
    link: {
       color: "var(--purple)",
       background: "var(--pink)",
@@ -91,10 +93,16 @@ const GlobalStyle = createGlobalStyle`
     /* colors */
     --black: #050505;
     --white: #FAFAFA;
+    --secondary-black: #111;
+    --secondary-white: #eee;
     --pink: #E838FF;
     --purple: #6F38FF;
     --transparentPink: #E838FF90;
     --transparentPurple: #6F38FF85;
+}
+
+* {
+    cursor: url("https://cur.cursors-4u.net/symbols/sym-7/sym629.ani"), url("https://cur.cursors-4u.net/symbols/sym-7/sym629.png"), auto !important;
 }
 
 *, *::before, *::after {
