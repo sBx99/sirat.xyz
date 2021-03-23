@@ -5,7 +5,7 @@ import { WebGif } from "@components/index/Images";
 import { NoiseBg } from "@components/index/Noise";
 
 import Content from "@components/index/Content";
-import Credits from "@components/index/Credits";
+// import Credits from "@components/index/Credits";
 
 const Styles = styled.div`
    overflow: hidden;
@@ -35,7 +35,7 @@ const Home = () => {
          <Styles>
             <WebGif />
             <Content />
-            <Credits />
+            {/*<Credits />*/}
          </Styles>
       </>
    );
