@@ -35,7 +35,7 @@
       "preact-render-to-string": "^5.1.16",
       "react": "npm:@preact/compat",
       "react-dom": "npm:@preact/compat",
-      "react-is": "^16.8.1",
+      "react-is": "^17.0.1",
       "react-ssr-prepass": "npm:preact-ssr-prepass",
       "react-syntax-highlighter": "^15.4.3",
       "react-three-fiber": "^5.3.19",
