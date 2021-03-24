@@ -1,8 +1,15 @@
 const withPlugins = require("next-compose-plugins");
+const withPrefresh = require("@prefresh/next");
 const withTM = require("next-transpile-modules")(["gsap", "react-syntax-highlighter"]);
 const withMdx = require("@next/mdx")();
-const withPreact = require("next-plugin-preact");
 const withPWA = require("next-pwa");
+const withPreact = require("next-plugin-preact");
+const preact = require("preact");
+
+const runtimeCaching = require("next-pwa/cache");
+runtimeCaching[0].handler = "StaleWhileRevalidate";
+
+const prod = process.env.NODE_ENV === "production";
 
 module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA]], {
    pageExtensions: ["js", "jsx", "mdx"],
@@ -13,7 +20,11 @@ module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA]], {
       modern: true,
    },
    pwa: {
+      disable: prod ? false : true,
+      register: false,
       dest: "public",
+      skipWaiting: false,
+      runtimeCaching,
    },
    async headers() {
       return [
