@@ -36,6 +36,8 @@ const BlogNav = styled.li`
    margin: 5vh 0;
    border-radius: 20px;
    background: ${({ theme }) => theme.secondary};
+   box-shadow: inset 0 0 10px 10px ${({ theme }) => theme.background};
+   transition: background 0.25s ease-in-out;
 
    :hover {
       background: rgba(127, 127, 127, 0.25);

@@ -2,14 +2,18 @@ const withPlugins = require("next-compose-plugins");
 const withTM = require("next-transpile-modules")(["gsap", "react-syntax-highlighter"]);
 const withMdx = require("@next/mdx")();
 const withPreact = require("next-plugin-preact");
+const withPWA = require("next-pwa");
 
-module.exports = withPlugins([[withTM], [withMdx], [withPreact]], {
+module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA]], {
    pageExtensions: ["js", "jsx", "mdx"],
    images: {
       domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
    },
    experimental: {
       modern: true,
+   },
+   pwa: {
+      dest: "public",
    },
    async headers() {
       return [

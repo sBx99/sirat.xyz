@@ -18,7 +18,6 @@ const DataWrap = styled.div`
 const Player = styled.div`
    display: flex;
    flex-direction: row;
-   align-items: left;
    width: 20em;
    margin: 0 2.5vw;
    padding: 0.5em;
@@ -44,6 +43,7 @@ const SongInfo = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
+   align-items: left;
    font-style: normal;
 
    margin-left: 0.5em;

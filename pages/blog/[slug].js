@@ -10,15 +10,13 @@ import BlogLink from "@components/blog/BlogLink";
 import { Meta } from "@components/Layout";
 import { blogFilePaths, BLOGS_PATH } from "@lib/mdx";
 
-import { CanvasWrap, CanvasWrap3D } from "@components/blog/CanvasUtils";
+import { CanvasWrap } from "@components/blog/CanvasUtils";
 
 const components = {
    a: BlogLink,
    TestComponent: dynamic(() => import("@components/blog/TestComponent")),
    RotatingLines: dynamic(() => import("@sketches/RotatingLines")),
-   Simple3D: dynamic(() => import("@sketches/Simple3D")),
    CanvasWrap,
-   CanvasWrap3D,
    Meta,
 };
 
