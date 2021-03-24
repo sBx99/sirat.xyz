@@ -11,7 +11,7 @@ runtimeCaching[0].handler = "StaleWhileRevalidate";
 
 const prod = process.env.NODE_ENV === "production";
 
-module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA]], {
+module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA], [withPrefresh]], {
    pageExtensions: ["js", "jsx", "mdx"],
    images: {
       domains: ["i.imgur.com", "media.giphy.com", "i.scdn.co", "cdn.glitch.com"],
@@ -22,7 +22,7 @@ module.exports = withPlugins([[withTM], [withMdx], [withPreact], [withPWA]], {
    pwa: {
       disable: prod ? false : true,
       register: false,
-      dest: "public",
+      dest: ".next/pwa",
       skipWaiting: false,
       runtimeCaching,
    },
