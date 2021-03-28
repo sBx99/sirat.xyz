@@ -15,11 +15,11 @@
       "blog"
    ],
    "scripts": {
-      "dev": "next dev",
+      "dev": "node ./index.js",
       "dev:watch": "next-remote-watch ./blogs",
       "build:ssg": "cross-env NODE_ENV=production next build && next export -o build",
       "build:ssr": "cross-env NODE_ENV=production next build",
-      "start": "cross-env NODE_ENV=production next start"
+      "start": "cross-env NODE_ENV=production node ./index.js"
    },
    "dependencies": {
       "@mdx-js/loader": "^1.6.22",
@@ -29,6 +29,8 @@
       "@prefresh/next": "^1.4.6",
       "canvas-sketch": "^0.7.4",
       "canvas-sketch-util": "^1.10.0",
+      "fastify": "^3.14.0",
+      "fastify-compress": "^3.4.2",
       "gray-matter": "^4.0.2",
       "gsap": "^3.6.0",
       "next": "^10.0.9",

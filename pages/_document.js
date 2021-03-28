@@ -120,6 +120,11 @@ class MyDocument extends Document {
             <body>
                <Main />
                <NextScript />
+               <script
+                  defer
+                  src="https://static.cloudflareinsights.com/beacon.min.js"
+                  data-cf-beacon='{"token": "49140d9fed1e4b28a59e8962efd8ef27"}'
+               />
                <style jsx global>{`
                   /* global style override */
 

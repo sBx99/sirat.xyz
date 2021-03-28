@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import useSound from "use-sound";
 
